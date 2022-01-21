@@ -2,7 +2,6 @@ package jpabook.jpashop.domain.item;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.jpa.domain.AbstractAuditable;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class Category {
             inverseJoinColumns = @JoinColumn(name = "item_id"))
     private List<Item> items = new ArrayList<>();
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category parent;
 
