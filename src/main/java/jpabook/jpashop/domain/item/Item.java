@@ -32,4 +32,15 @@ public abstract class Item {
      *     referencedColumnName = "categories_id"))
       */
     private List<Category> categories = new ArrayList<>();
+
+    /* 비즈니스 로직 */
+    public void addStock(int quantity) {
+        this.stockQuantity += quantity;
+    }
+
+    public void removeStock(int quantity) {
+        int retStock = this.stockQuantity - quantity;
+        if (retStock < 0) throw new IllegalStateException("재고가 부족합니다.");
+        this.stockQuantity = retStock;
+    }
 }
