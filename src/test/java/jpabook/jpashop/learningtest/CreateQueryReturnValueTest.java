@@ -1,4 +1,4 @@
-package jpabook.jpashop;
+package jpabook.jpashop.learningtest;
 
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.service.MemberService;
@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-public class EntityManagerTest {
+public class CreateQueryReturnValueTest {
 
     @Autowired
     EntityManager em;
