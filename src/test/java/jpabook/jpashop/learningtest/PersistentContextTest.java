@@ -100,6 +100,9 @@ public class PersistentContextTest {
      * merge는 비영속, 준영속 엔티티 모두 영속 엔티티로 만들 수 있으나 새로운 영속 엔티티로 반환한다.
      * merge는 앤티티의 식별자 값으로 1차 캐시를 조회했을때, 매핑된 내용이 없으면 데이터 베이스에서 조회해 1차 캐시에 저장한다.
      * 머지할 값(인자로 넘겨받은)을 새롭게 생성된(mergeMember에 담길) 오브젝트에 밀어넣고, 새롬게 생성된 오브젝트를 반환한다.
+     *
+     * ** 이 과정에서 데이터 베이스의 내용도 동시에 업데이트가 되는 것이 아니고,
+     * 실질적인 업데이트 시점은 트랜젝션 커밋과 동시에 `dirty checking(변경 감지)` 에 의해 sql문이 생성되고 다른 sql문들과 함께 데이터베이스에 반영된다.
      */
     @Test(expected = PersistenceException.class)
     @DisplayName("준영속 엔티티를 영속화하는 방법 - persist 사용 불가")
