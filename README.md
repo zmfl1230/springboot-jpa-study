@@ -8,11 +8,15 @@
 - IDENTITY 전략 테스트
 - SEQUENCE 전략 테스트
 
+✍🏻  [페치 조인 vs 내부 조인](https://github.com/zmfl1230/springboot-jpa-study/blob/master/src/test/java/jpabook/jpashop/learningtest/JoinTest.java)
+- 페치 조인 시, 쿼리 확인
+- 내부 조인 시, 쿼리 확인
+- 내부 조인 페치 조인처럼 사용하기
+
 ✍🏻  [Proxy 객체](https://github.com/zmfl1230/springboot-jpa-study/blob/master/src/test/java/jpabook/jpashop/learningtest/ProxyTest.java)
 - Proxy 객체의 확인
 - getReference()호출 순서에 따른 반환 타입 확인
 - db에 저장되어 있지 않은 식별자 값을 getReference()로 호출
-
 
 ✍🏻  [엔티티 생명주기](https://github.com/zmfl1230/springboot-jpa-study/blob/master/src/test/java/jpabook/jpashop/learningtest/PersistentContextTest.java)
 - 준영속 엔티티 vs 영속 엔티티
