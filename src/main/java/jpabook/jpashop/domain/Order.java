@@ -26,7 +26,7 @@ public class Order {
     private List<OrderItem> orderItems = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "delivery_Id")
+    @JoinColumn(name = "delivery_Id", unique = true)
     private Delivery delivery;
 
 

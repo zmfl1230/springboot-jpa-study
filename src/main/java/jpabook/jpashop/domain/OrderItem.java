@@ -32,4 +32,11 @@ public class OrderItem {
     private int orderPrice;
 
     private int quantity;
+
+    /* 연관관계 편의 메서드 */
+    public void updateOrder(Order order) {
+        this.order = order;
+        order.getOrderItems().add(this);
+    }
+
 }

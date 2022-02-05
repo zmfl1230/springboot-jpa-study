@@ -25,12 +25,6 @@ public abstract class Item {
     private int stockQuantity;
 
     @ManyToMany(mappedBy = "items")
-    /**
-     * TODO: 잘못된 설정인 이유
-     *  @JoinTable(name = "category_item",
-     *     joinColumns = @JoinColumn(name = "item_id",
-     *     referencedColumnName = "categories_id"))
-      */
     private List<Category> categories = new ArrayList<>();
 
     /* 비즈니스 로직 */
