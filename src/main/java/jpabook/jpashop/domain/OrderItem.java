@@ -22,6 +22,7 @@ public class OrderItem {
      * 즉, 하나의 Order에 여러개의 OrderItem이 연결되는 댜대일 관계가 형성. 고로, OrderItem 입장에선 @ManyToOne 이 맞음
      * 반대로 Order에 입장에서 본인은 하나인데 여러개의 OrderItem이 본인을 가리키는 입장이므로 @OneToMany가 맞음
      * */
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
