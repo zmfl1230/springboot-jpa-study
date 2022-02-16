@@ -36,4 +36,14 @@ public class Order {
     private OrderStatus orderStatus;
 
 
+    public static Order createOrder(Member member, Delivery delivery, OrderItem orderItem1, OrderItem orderItem2) {
+        Order order = new Order();
+        order.setMember(member);
+        order.setDelivery(delivery);
+        order.getOrderItems().add(orderItem1);
+        order.getOrderItems().add(orderItem2);
+        orderItem1.setOrder(order);
+        orderItem2.setOrder(order);
+        return order;
+    }
 }

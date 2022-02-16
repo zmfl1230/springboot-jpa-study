@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jpabook.jpashop.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,6 +33,14 @@ public class OrderItem {
     private int orderPrice;
 
     private int quantity;
+
+    public static OrderItem createOrderItem(Item item, int price, int quantity) {
+        OrderItem orderItem = new OrderItem();
+        orderItem.setItem(item);
+        orderItem.setOrderPrice(price);
+        orderItem.setQuantity(quantity);
+        return orderItem;
+    }
 
     /* 연관관계 편의 메서드 */
     public void updateOrder(Order order) {
