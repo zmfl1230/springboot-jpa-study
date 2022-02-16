@@ -22,10 +22,10 @@ public class Order {
     private Member member;
 
     // 한번에 여러개의 주문 아이템을 넣을 수 있으므로, cascade 설정
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)
     private List<OrderItem> orderItems = new ArrayList<>();
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "delivery_Id", unique = true)
     private Delivery delivery;
 
