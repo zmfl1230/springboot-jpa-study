@@ -3,7 +3,7 @@
 아래는 실험을 진행하고 고찰한 내용을 담은 파일경로들을 기록합니다 :)
 
 
-✍🏻  [엔티티 반환의 문제점과 이를 요구사항에 맞춰 해결해가는 다양한 과정, 최종적으로 DTO로 반환하기까지의 고민들]()
+✍🏻  [엔티티 반환의 문제점과 이를 요구사항에 맞춰 해결해가는 다양한 과정, 최종적으로 DTO로 반환하기까지의 고민들](https://github.com/zmfl1230/springboot-jpa-study/blob/413928b97ac097c9420b6c6fee6b7471f0824c97/src/main/java/jpabook/jpashop/controller/OrderSimpleController.java)
 
 ✍🏻  [기본키 생성 전략](https://github.com/zmfl1230/springboot-jpa-study/blob/master/src/test/java/jpabook/jpashop/learningtest/PrimaryKeyCreationStrategyTest.java)
 - IDENTITY 전략 테스트
